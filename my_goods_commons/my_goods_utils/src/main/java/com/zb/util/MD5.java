@@ -1,4 +1,4 @@
-package com.accp.util;
+package com.zb.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

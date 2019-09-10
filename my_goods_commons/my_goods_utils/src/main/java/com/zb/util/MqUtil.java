@@ -1,4 +1,4 @@
-package com.accp.util;
+package com.zb.util;
 
 import org.apache.activemq.command.ActiveMQQueue;
 import org.apache.activemq.command.ActiveMQTopic;

@@ -1,4 +1,4 @@
-package com.accp.util;
+package com.zb.util;
 /**
  * 用户登录失败异常
  * @author hduser
