@@ -8,6 +8,9 @@
         <module>my_goods_mouble</module>
         <module>my_goods_dao</module>
         <module>my_goods_client</module>
+        <module>my_goos_dto</module>
+        <module>my_goos_utils</module>
+        <module>my_goods_utils</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
