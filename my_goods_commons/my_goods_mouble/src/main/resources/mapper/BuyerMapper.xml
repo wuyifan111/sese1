@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.BuyerMapper">
+
+    <select id="getBuyerById" resultType="com.zb.pojo.Buyer">
+        select
+                id as id,
+                name as name,
+                cardId as cardId,
+                address as address,
+                uid as uid
+        from buyer
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getBuyerListByMap" resultType="com.zb.pojo.Buyer" parameterType="java.util.Map">
+        select
+                id as id,
+                name as name,
+                cardId as cardId,
+                address as address,
+                uid as uid
+        from buyer
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="cardId != null and cardId!=''">
+                    and cardId=#{cardId}
+                </if>
+                <if test="address != null and address!=''">
+                    and address=#{address}
+                </if>
+                <if test="uid != null and uid!=''">
+                    and uid=#{uid}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getBuyerCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from buyer
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="cardId != null and cardId!=''">
+                    and cardId=#{cardId}
+                </if>
+                <if test="address != null and address!=''">
+                    and address=#{address}
+                </if>
+                <if test="uid != null and uid!=''">
+                    and uid=#{uid}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertBuyer" parameterType="com.zb.pojo.Buyer">
+        insert into buyer(
+                        name,
+                        cardId,
+                        address,
+                        uid)
+        values(
+                     #{name},
+                     #{cardId},
+                     #{address},
+                    #{uid})
+    </insert>
+
+    <update id="updateBuyer" parameterType="com.zb.pojo.Buyer">
+        update buyer
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="name != null and name!=''">
+                            name=#{name},
+                        </if>
+                        <if test="cardId != null and cardId!=''">
+                            cardId=#{cardId},
+                        </if>
+                        <if test="address != null and address!=''">
+                            address=#{address},
+                        </if>
+                        <if test="uid != null and uid!=''">
+                            uid=#{uid}
+                        </if>
+        </trim>
+    </update>
+</mapper>

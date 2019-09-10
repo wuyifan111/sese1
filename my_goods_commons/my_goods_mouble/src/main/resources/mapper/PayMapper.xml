@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.PayMapper">
+
+    <select id="getPayById" resultType="com.zb.pojo.Pay">
+        select
+                id as id,
+                orderNo as orderNo,
+                tradeNo as tradeNo,
+                payMethod as payMethod,
+                amount as amount,
+                createTime as createTime,
+                updateTime as updateTime
+        from pay
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getPayListByMap" resultType="com.zb.pojo.Pay" parameterType="java.util.Map">
+        select
+                id as id,
+                orderNo as orderNo,
+                tradeNo as tradeNo,
+                payMethod as payMethod,
+                amount as amount,
+                createTime as createTime,
+                updateTime as updateTime
+        from pay
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="orderNo != null and orderNo!=''">
+                    and orderNo=#{orderNo}
+                </if>
+                <if test="tradeNo != null and tradeNo!=''">
+                    and tradeNo=#{tradeNo}
+                </if>
+                <if test="payMethod != null and payMethod!=''">
+                    and payMethod=#{payMethod}
+                </if>
+                <if test="amount != null and amount!=''">
+                    and amount=#{amount}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+                <if test="updateTime != null and updateTime!=''">
+                    and updateTime=#{updateTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getPayCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from pay
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="orderNo != null and orderNo!=''">
+                    and orderNo=#{orderNo}
+                </if>
+                <if test="tradeNo != null and tradeNo!=''">
+                    and tradeNo=#{tradeNo}
+                </if>
+                <if test="payMethod != null and payMethod!=''">
+                    and payMethod=#{payMethod}
+                </if>
+                <if test="amount != null and amount!=''">
+                    and amount=#{amount}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+                <if test="updateTime != null and updateTime!=''">
+                    and updateTime=#{updateTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertPay" parameterType="com.zb.pojo.Pay">
+        insert into pay(
+                        orderNo,
+                        tradeNo,
+                        payMethod,
+                        amount,
+                        createTime,
+                        updateTime)
+        values(
+                     #{orderNo},
+                     #{tradeNo},
+                     #{payMethod},
+                     #{amount},
+                     #{createTime},
+                    #{updateTime})
+    </insert>
+
+    <update id="updatePay" parameterType="com.zb.pojo.Pay">
+        update pay
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="orderNo != null and orderNo!=''">
+                            orderNo=#{orderNo},
+                        </if>
+                        <if test="tradeNo != null and tradeNo!=''">
+                            tradeNo=#{tradeNo},
+                        </if>
+                        <if test="payMethod != null and payMethod!=''">
+                            payMethod=#{payMethod},
+                        </if>
+                        <if test="amount != null and amount!=''">
+                            amount=#{amount},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime},
+                        </if>
+                        <if test="updateTime != null and updateTime!=''">
+                            updateTime=#{updateTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

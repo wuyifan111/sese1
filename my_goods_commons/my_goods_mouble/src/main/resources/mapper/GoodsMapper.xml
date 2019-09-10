@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.GoodsMapper">
+
+    <select id="getGoodsById" resultType="com.zb.pojo.Goods">
+        select
+                id as id,
+                Gname as Gname,
+                Gtypeid as Gtypeid,
+                Gaddress as Gaddress,
+                Gprice as Gprice,
+                Gdatetime as Gdatetime,
+                Gchang as Gchang,
+                Gscene as Gscene,
+                Gticket as Gticket,
+                Gtobuy as Gtobuy,
+                Gimage as Gimage
+        from goods
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getGoodsListByMap" resultType="com.zb.pojo.Goods" parameterType="java.util.Map">
+        select
+                id as id,
+                Gname as Gname,
+                Gtypeid as Gtypeid,
+                Gaddress as Gaddress,
+                Gprice as Gprice,
+                Gdatetime as Gdatetime,
+                Gchang as Gchang,
+                Gscene as Gscene,
+                Gticket as Gticket,
+                Gtobuy as Gtobuy,
+                Gimage as Gimage
+        from goods
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="Gname != null and Gname!=''">
+                    and Gname=#{Gname}
+                </if>
+                <if test="Gtypeid != null and Gtypeid!=''">
+                    and Gtypeid=#{Gtypeid}
+                </if>
+                <if test="Gaddress != null and Gaddress!=''">
+                    and Gaddress=#{Gaddress}
+                </if>
+                <if test="Gprice != null and Gprice!=''">
+                    and Gprice=#{Gprice}
+                </if>
+                <if test="Gdatetime != null and Gdatetime!=''">
+                    and Gdatetime=#{Gdatetime}
+                </if>
+                <if test="Gchang != null and Gchang!=''">
+                    and Gchang=#{Gchang}
+                </if>
+                <if test="Gscene != null and Gscene!=''">
+                    and Gscene=#{Gscene}
+                </if>
+                <if test="Gticket != null and Gticket!=''">
+                    and Gticket=#{Gticket}
+                </if>
+                <if test="Gtobuy != null and Gtobuy!=''">
+                    and Gtobuy=#{Gtobuy}
+                </if>
+                <if test="Gimage != null and Gimage!=''">
+                    and Gimage=#{Gimage}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getGoodsCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from goods
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="Gname != null and Gname!=''">
+                    and Gname=#{Gname}
+                </if>
+                <if test="Gtypeid != null and Gtypeid!=''">
+                    and Gtypeid=#{Gtypeid}
+                </if>
+                <if test="Gaddress != null and Gaddress!=''">
+                    and Gaddress=#{Gaddress}
+                </if>
+                <if test="Gprice != null and Gprice!=''">
+                    and Gprice=#{Gprice}
+                </if>
+                <if test="Gdatetime != null and Gdatetime!=''">
+                    and Gdatetime=#{Gdatetime}
+                </if>
+                <if test="Gchang != null and Gchang!=''">
+                    and Gchang=#{Gchang}
+                </if>
+                <if test="Gscene != null and Gscene!=''">
+                    and Gscene=#{Gscene}
+                </if>
+                <if test="Gticket != null and Gticket!=''">
+                    and Gticket=#{Gticket}
+                </if>
+                <if test="Gtobuy != null and Gtobuy!=''">
+                    and Gtobuy=#{Gtobuy}
+                </if>
+                <if test="Gimage != null and Gimage!=''">
+                    and Gimage=#{Gimage}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertGoods" parameterType="com.zb.pojo.Goods">
+        insert into goods(
+                        Gname,
+                        Gtypeid,
+                        Gaddress,
+                        Gprice,
+                        Gdatetime,
+                        Gchang,
+                        Gscene,
+                        Gticket,
+                        Gtobuy,
+                        Gimage)
+        values(
+                     #{Gname},
+                     #{Gtypeid},
+                     #{Gaddress},
+                     #{Gprice},
+                     #{Gdatetime},
+                     #{Gchang},
+                     #{Gscene},
+                     #{Gticket},
+                     #{Gtobuy},
+                    #{Gimage})
+    </insert>
+
+    <update id="updateGoods" parameterType="com.zb.pojo.Goods">
+        update goods
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="Gname != null and Gname!=''">
+                            Gname=#{Gname},
+                        </if>
+                        <if test="Gtypeid != null and Gtypeid!=''">
+                            Gtypeid=#{Gtypeid},
+                        </if>
+                        <if test="Gaddress != null and Gaddress!=''">
+                            Gaddress=#{Gaddress},
+                        </if>
+                        <if test="Gprice != null and Gprice!=''">
+                            Gprice=#{Gprice},
+                        </if>
+                        <if test="Gdatetime != null and Gdatetime!=''">
+                            Gdatetime=#{Gdatetime},
+                        </if>
+                        <if test="Gchang != null and Gchang!=''">
+                            Gchang=#{Gchang},
+                        </if>
+                        <if test="Gscene != null and Gscene!=''">
+                            Gscene=#{Gscene},
+                        </if>
+                        <if test="Gticket != null and Gticket!=''">
+                            Gticket=#{Gticket},
+                        </if>
+                        <if test="Gtobuy != null and Gtobuy!=''">
+                            Gtobuy=#{Gtobuy},
+                        </if>
+                        <if test="Gimage != null and Gimage!=''">
+                            Gimage=#{Gimage}
+                        </if>
+        </trim>
+    </update>
+</mapper>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.UsersMapper">
+
+    <select id="getUsersById" resultType="com.zb.pojo.Users">
+        select
+                uid as uid,
+                upwd as upwd,
+                nickname as nickname,
+                name as name,
+                cardId as cardId,
+                birthday as birthday,
+                phone as phone,
+                email as email,
+                address as address
+        from users
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getUsersListByMap" resultType="com.zb.pojo.Users" parameterType="java.util.Map">
+        select
+                uid as uid,
+                upwd as upwd,
+                nickname as nickname,
+                name as name,
+                cardId as cardId,
+                birthday as birthday,
+                phone as phone,
+                email as email,
+                address as address
+        from users
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="uid != null and uid!=''">
+                    and uid=#{uid}
+                </if>
+                <if test="upwd != null and upwd!=''">
+                    and upwd=#{upwd}
+                </if>
+                <if test="nickname != null and nickname!=''">
+                    and nickname=#{nickname}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="cardId != null and cardId!=''">
+                    and cardId=#{cardId}
+                </if>
+                <if test="birthday != null and birthday!=''">
+                    and birthday=#{birthday}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="email != null and email!=''">
+                    and email=#{email}
+                </if>
+                <if test="address != null and address!=''">
+                    and address=#{address}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getUsersCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from users
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="uid != null and uid!=''">
+                    and uid=#{uid}
+                </if>
+                <if test="upwd != null and upwd!=''">
+                    and upwd=#{upwd}
+                </if>
+                <if test="nickname != null and nickname!=''">
+                    and nickname=#{nickname}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="cardId != null and cardId!=''">
+                    and cardId=#{cardId}
+                </if>
+                <if test="birthday != null and birthday!=''">
+                    and birthday=#{birthday}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="email != null and email!=''">
+                    and email=#{email}
+                </if>
+                <if test="address != null and address!=''">
+                    and address=#{address}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertUsers" parameterType="com.zb.pojo.Users">
+        insert into users(
+                        uid,
+                        upwd,
+                        nickname,
+                        name,
+                        cardId,
+                        birthday,
+                        phone,
+                        email,
+                        address)
+        values(
+                     #{uid},
+                     #{upwd},
+                     #{nickname},
+                     #{name},
+                     #{cardId},
+                     #{birthday},
+                     #{phone},
+                     #{email},
+                    #{address})
+    </insert>
+
+    <update id="updateUsers" parameterType="com.zb.pojo.Users">
+        update users
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="uid != null and uid!=''">
+                            uid=#{uid},
+                        </if>
+                        <if test="upwd != null and upwd!=''">
+                            upwd=#{upwd},
+                        </if>
+                        <if test="nickname != null and nickname!=''">
+                            nickname=#{nickname},
+                        </if>
+                        <if test="name != null and name!=''">
+                            name=#{name},
+                        </if>
+                        <if test="cardId != null and cardId!=''">
+                            cardId=#{cardId},
+                        </if>
+                        <if test="birthday != null and birthday!=''">
+                            birthday=#{birthday},
+                        </if>
+                        <if test="phone != null and phone!=''">
+                            phone=#{phone},
+                        </if>
+                        <if test="email != null and email!=''">
+                            email=#{email},
+                        </if>
+                        <if test="address != null and address!=''">
+                            address=#{address}
+                        </if>
+        </trim>
+    </update>
+</mapper>
