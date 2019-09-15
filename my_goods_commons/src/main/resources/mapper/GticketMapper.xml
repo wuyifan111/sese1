@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.GticketMapper">
+
+    <select id="getGticketById" resultType="com.zb.pojo.Gticket">
+        select
+                id as id,
+                ticketname as ticketname,
+                goodsid as goodsid,
+                Gcount as Gcount
+        from gticket
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getGticketListByMap" resultType="com.zb.pojo.Gticket" parameterType="java.util.Map">
+        select
+                id as id,
+                ticketname as ticketname,
+                goodsid as goodsid,
+                Gcount as Gcount
+        from gticket
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="ticketname != null and ticketname!=''">
+                    and ticketname=#{ticketname}
+                </if>
+                <if test="goodsid != null and goodsid!=''">
+                    and goodsid=#{goodsid}
+                </if>
+                <if test="Gcount != null and Gcount!=''">
+                    and Gcount=#{Gcount}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getGticketCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from gticket
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="ticketname != null and ticketname!=''">
+                    and ticketname=#{ticketname}
+                </if>
+                <if test="goodsid != null and goodsid!=''">
+                    and goodsid=#{goodsid}
+                </if>
+                <if test="Gcount != null and Gcount!=''">
+                    and Gcount=#{Gcount}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertGticket" parameterType="com.zb.pojo.Gticket">
+        insert into gticket(
+                        ticketname,
+                        goodsid,
+                        Gcount)
+        values(
+                     #{ticketname},
+                     #{goodsid},
+                    #{Gcount})
+    </insert>
+
+    <update id="updateGticket" parameterType="com.zb.pojo.Gticket">
+        update gticket
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="ticketname != null and ticketname!=''">
+                            ticketname=#{ticketname},
+                        </if>
+                        <if test="goodsid != null and goodsid!=''">
+                            goodsid=#{goodsid},
+                        </if>
+                        <if test="Gcount != null and Gcount!=''">
+                            Gcount=#{Gcount}
+                        </if>
+        </trim>
+    </update>
+</mapper>

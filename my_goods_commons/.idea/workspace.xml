@@ -3,7 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0dbc8d5e-4604-46c4-8a67-ef3bea49ad3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_goods_client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_goods_mouble/src/main/resources/mapper/BuyerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/BuyerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_goods_mouble/src/main/resources/mapper/DingdanMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/DingdanMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_goods_mouble/src/main/resources/mapper/GaddressMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/GaddressMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_goods_mouble/src/main/resources/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/GoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_goods_mouble/src/main/resources/mapper/GqgmessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/GqgmessageMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_goods_mouble/src/main/resources/mapper/GticketMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/GticketMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_goods_mouble/src/main/resources/mapper/GtypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/GtypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_goods_mouble/src/main/resources/mapper/OrderDbMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/OrderDbMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_goods_mouble/src/main/resources/mapper/PayMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/PayMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_goods_mouble/src/main/resources/mapper/UserAuthsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/UserAuthsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_goods_mouble/src/main/resources/mapper/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/UsersMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,27 +89,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="25" />
-          <entry key="xml" value="11" />
+          <entry key="java" value="27" />
+          <entry key="xml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="25" />
-          <entry key="XML" value="11" />
+          <entry key="JAVA" value="27" />
+          <entry key="XML" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="59" />
-          <entry key="txt" value="17" />
+          <entry key="txt" value="24" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="59" />
-          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="PLAIN_TEXT" value="24" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -114,16 +124,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_goods_client/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+            <state relative-caret-position="216">
+              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my_goods_dao/src/main/java/com/zb/mapper/GoodsMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/PayMapper.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\weifuwu\sese2\my_goods_commons\my_goods_dao\src\main\java\resources</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -227,63 +259,55 @@
             <path>
               <item name="my_goods_commons" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_goods_commons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_goods_client" type="462c0819:PsiDirectoryNode" />
+              <item name="my_goods_dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_goods_commons" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_goods_commons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_goods_client" type="462c0819:PsiDirectoryNode" />
+              <item name="my_goods_dao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_goods_commons" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_goods_commons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_goods_utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_goods_commons" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_goods_commons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_goods_utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_goods_commons" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_goods_commons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_goods_utils" type="462c0819:PsiDirectoryNode" />
+              <item name="my_goods_dao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_goods_commons" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_goods_commons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_goods_utils" type="462c0819:PsiDirectoryNode" />
+              <item name="my_goods_dao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_goods_commons" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_goods_commons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_goods_utils" type="462c0819:PsiDirectoryNode" />
+              <item name="my_goods_dao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zb" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_goods_commons" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_goods_commons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_goods_utils" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zb" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="my_goods_mouble" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_goods_commons" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_goods_commons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_goos_dto" type="462c0819:PsiDirectoryNode" />
+              <item name="my_goods_mouble" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_goods_commons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_goods_commons" type="462c0819:PsiDirectoryNode" />
+              <item name="my_goods_mouble" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -295,8 +319,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568513567702" />
-    <property name="last_opened_file_path" value="E:/wfxm/my_goods_qg" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568516044768" />
+    <property name="last_opened_file_path" value="D:/springcould/code-parent" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -340,7 +364,7 @@
       <workItem from="1568511659001" duration="83000" />
       <workItem from="1568511751873" duration="160000" />
       <workItem from="1568512533076" duration="50000" />
-      <workItem from="1568512662907" duration="765000" />
+      <workItem from="1568512662907" duration="3327000" />
     </task>
     <task id="LOCAL-00001" summary="卖票修改版">
       <created>1568508930231</created>
@@ -356,15 +380,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568511890583</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="卖票公共模块终极版">
+      <created>1568513638068</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568513638068</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9303000" />
+    <option name="totallyTimeSpent" value="11865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="1386" height="788" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25263953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -373,9 +403,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36085626" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16207951" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -394,7 +425,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" weight="0.3295626" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.1764706" />
+      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.09803922" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +437,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="卖票修改版" />
     <MESSAGE value="卖票再次修改版" />
-    <option name="LAST_COMMIT_MESSAGE" value="卖票再次修改版" />
+    <MESSAGE value="卖票公共模块终极版" />
+    <option name="LAST_COMMIT_MESSAGE" value="卖票公共模块终极版" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -558,12 +590,29 @@
         <state relative-caret-position="-81" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_goods_client/pom.xml">
+    <entry file="file://$PROJECT_DIR$/my_goods_dao/src/main/java/com/zb/mapper/BuyerMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        <state relative-caret-position="189">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_goods_client/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_goods_dao/src/main/java/com/zb/mapper/GoodsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_goods_dao/src/main/resources/mapper/PayMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
