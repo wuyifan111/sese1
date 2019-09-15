@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 /**
 * Created by shang-pc on 2018/5/15.
 */
-@FeignClient(name = "my-house-private", fallback = UsersClientFallBack.class)
+@FeignClient(name = "my-goods-user", fallback = UsersClientFallBack.class)
 public interface RestUsersClient {
 @RequestMapping(value = "/getUsersById",method = RequestMethod.POST)
 public Users getUsersById(@RequestParam("id") Long id)throws Exception;

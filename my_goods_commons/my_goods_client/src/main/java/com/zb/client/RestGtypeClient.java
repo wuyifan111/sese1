@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 /**
 * Created by shang-pc on 2018/5/15.
 */
-@FeignClient(name = "my-house-private", fallback = GtypeClientFallBack.class)
+@FeignClient(name = "my-goods-ticket", fallback = GtypeClientFallBack.class)
 public interface RestGtypeClient {
 @RequestMapping(value = "/getGtypeById",method = RequestMethod.POST)
 public Gtype getGtypeById(@RequestParam("id") Long id)throws Exception;

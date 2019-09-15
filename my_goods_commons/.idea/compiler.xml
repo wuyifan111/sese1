@@ -9,6 +9,8 @@
         <module name="my_goods_client" />
         <module name="my_goods_dao" />
         <module name="my_goods_mouble" />
+        <module name="my_goods_utils" />
+        <module name="my_goos_dto" />
       </profile>
     </annotationProcessing>
   </component>

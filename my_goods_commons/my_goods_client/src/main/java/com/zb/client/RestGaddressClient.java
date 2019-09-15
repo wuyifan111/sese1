@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 /**
 * Created by shang-pc on 2018/5/15.
 */
-@FeignClient(name = "my-house-private", fallback = GaddressClientFallBack.class)
+@FeignClient(name = "my-goods-ticket", fallback = GaddressClientFallBack.class)
 public interface RestGaddressClient {
 @RequestMapping(value = "/getGaddressById",method = RequestMethod.POST)
 public Gaddress getGaddressById(@RequestParam("id") Long id)throws Exception;

@@ -22,10 +22,10 @@
             <version>1.3.4</version>
         </dependency>
         <dependency>
-            <artifactId>my_goods_mouble</artifactId>
-            <groupId>com.zb</groupId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+        <artifactId>my_goods_mouble</artifactId>
+        <groupId>com.zb</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
     </dependencies>
 
 </project>

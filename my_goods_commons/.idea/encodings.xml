@@ -5,5 +5,7 @@
     <file url="file://$PROJECT_DIR$/my_goods_client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my_goods_dao" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my_goods_mouble" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my_goods_utils" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my_goos_dto" charset="UTF-8" />
   </component>
 </project>
